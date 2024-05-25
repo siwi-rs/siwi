@@ -1,0 +1,50 @@
+[package]
+authors = [
+  "siwilizhao <siwilizhao@gmail.com>",
+] 
+categories = [
+  "network-programming",
+  "asynchronous",
+  "web-programming::http-server",
+] 
+description = "A minimal Rust web application framework" 
+documentation = "https://docs.rs/siwi" 
+edition = "2021" 
+keywords = ["siwi", "http", "web", "framework", "async"] 
+license = "Apache-2.0" 
+name = "siwi" 
+publish = true # no accidents while in dev
+readme = "README.md" 
+repository = "https://github.com/siwi-rs/siwi" 
+version = "0.0.1" 
+
+include = [
+  "Cargo.toml",
+  "LICENSE",
+  "src/**/*", #"build.rs",
+]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1"
+async-trait = "0.1"
+bytes = "1"
+chrono = {version = "0.4", features = ["serde"]}
+dotenv = "0.15.0"
+http-body = "1.0"
+http-body-util = "0.1"
+hyper = {version = "1", features = ["full"]}
+mime = "0.3"
+route-recognizer = "0.3"
+serde = {version = "1.0", features = ["derive"]}
+serde_json = "1.0"
+serde_urlencoded = "0.7"
+thiserror = "1"
+tokio = {version = "1", features = ["full"]}
+tracing = "0.1"
+hyper-util = { version = "0.1", features = ["full"] }
+[dev-dependencies]
+
+[features]
+default = []
